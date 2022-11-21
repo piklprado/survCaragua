@@ -1,0 +1,10 @@
+*.RData
+*.Rhistory
+*~
+*.*~
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.tiff
