@@ -85,7 +85,7 @@ odds.tipo.grupo <- function(modelo){
           upp = apply(fix.dif,1,quantile, 0.975))
 }
 
-## Probs previstos para cada novos dados
+## Probs previstos para novos dados
 pred.new <- function(newdata, dados, formula){
     dados.pred <- rbind(dados,newdata)
     ## %>% mutate(nome_especie = factor(nome_especie))
@@ -106,7 +106,7 @@ pred.new <- function(newdata, dados, formula){
     cbind(dados.pred[indice, ], model$summary.fitted.values[indice,])
 }
 
-## Prepara dados para previsa de probs por especies
+## Prepara dados para previsao de probs por especies
 newd.spp <- function(dados){
     unique(dados[, c("nome_especie","grupo", "tipo")]) %>%
     arrange(grupo, nome_especie, tipo) %>%
